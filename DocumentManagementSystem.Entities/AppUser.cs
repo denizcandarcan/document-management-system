@@ -1,0 +1,24 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DocumentManagementSystem.Entities
+{
+    public class AppUser : BaseEntity
+    {
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string Email { get; set; }
+        public string PhoneNumber { get; set; }
+        public int DeparmentId { get; set; }
+        public Department Department { get; set; }
+        public List<AppUserDocument> AppUserDocuments { get; set; }
+        public List<AppUserRole> AppUserRoles { get; set; }
+        public List<Location> Locations { get; set; }
+
+    }
+}

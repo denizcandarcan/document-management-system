@@ -1,0 +1,12 @@
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Common\bin\Debug\net5.0\DocumentManagementSystem.Common.deps.json
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Common\bin\Debug\net5.0\DocumentManagementSystem.Common.dll
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Common\bin\Debug\net5.0\DocumentManagementSystem.Common.pdb
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Common\obj\Debug\net5.0\DocumentManagementSystem.Common.csproj.AssemblyReference.cache
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Common\obj\Debug\net5.0\DocumentManagementSystem.Common.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Common\obj\Debug\net5.0\DocumentManagementSystem.Common.AssemblyInfoInputs.cache
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Common\obj\Debug\net5.0\DocumentManagementSystem.Common.AssemblyInfo.cs
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Common\obj\Debug\net5.0\DocumentManagementSystem.Common.csproj.CoreCompileInputs.cache
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Common\obj\Debug\net5.0\DocumentManagementSystem.Common.dll
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Common\obj\Debug\net5.0\refint\DocumentManagementSystem.Common.dll
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Common\obj\Debug\net5.0\DocumentManagementSystem.Common.pdb
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Common\obj\Debug\net5.0\ref\DocumentManagementSystem.Common.dll

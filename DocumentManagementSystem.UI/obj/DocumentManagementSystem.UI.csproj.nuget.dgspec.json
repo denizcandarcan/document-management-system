@@ -1,0 +1,331 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.UI\\DocumentManagementSystem.UI.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Business\\DocumentManagementSystem.Business.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Business\\DocumentManagementSystem.Business.csproj",
+        "projectName": "DocumentManagementSystem.Business",
+        "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Business\\DocumentManagementSystem.Business.csproj",
+        "packagesPath": "C:\\Users\\deniz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Business\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\deniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.DataAccess\\DocumentManagementSystem.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.DataAccess\\DocumentManagementSystem.DataAccess.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Common\\DocumentManagementSystem.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Common\\DocumentManagementSystem.Common.csproj",
+        "projectName": "DocumentManagementSystem.Common",
+        "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Common\\DocumentManagementSystem.Common.csproj",
+        "packagesPath": "C:\\Users\\deniz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\deniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.DataAccess\\DocumentManagementSystem.DataAccess.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.DataAccess\\DocumentManagementSystem.DataAccess.csproj",
+        "projectName": "DocumentManagementSystem.DataAccess",
+        "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.DataAccess\\DocumentManagementSystem.DataAccess.csproj",
+        "packagesPath": "C:\\Users\\deniz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.DataAccess\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\deniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Common\\DocumentManagementSystem.Common.csproj": {
+                "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Common\\DocumentManagementSystem.Common.csproj"
+              },
+              "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Entities\\DocumentManagementSystem.Entities.csproj": {
+                "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Entities\\DocumentManagementSystem.Entities.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[5.0.17, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Entities\\DocumentManagementSystem.Entities.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Entities\\DocumentManagementSystem.Entities.csproj",
+        "projectName": "DocumentManagementSystem.Entities",
+        "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Entities\\DocumentManagementSystem.Entities.csproj",
+        "packagesPath": "C:\\Users\\deniz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Entities\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\deniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.UI\\DocumentManagementSystem.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.UI\\DocumentManagementSystem.UI.csproj",
+        "projectName": "DocumentManagementSystem.UI",
+        "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.UI\\DocumentManagementSystem.UI.csproj",
+        "packagesPath": "C:\\Users\\deniz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.UI\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\deniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Business\\DocumentManagementSystem.Business.csproj": {
+                "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Business\\DocumentManagementSystem.Business.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[5.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
