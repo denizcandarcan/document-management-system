@@ -1,0 +1,15 @@
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Dtos\bin\Debug\net5.0\DocumentManagementSystem.Dtos.deps.json
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Dtos\bin\Debug\net5.0\DocumentManagementSystem.Dtos.dll
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Dtos\bin\Debug\net5.0\DocumentManagementSystem.Dtos.pdb
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Dtos\bin\Debug\net5.0\DocumentManagementSystem.Entities.dll
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Dtos\bin\Debug\net5.0\DocumentManagementSystem.Entities.pdb
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Dtos\obj\Debug\net5.0\DocumentManagementSystem.Dtos.csproj.AssemblyReference.cache
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Dtos\obj\Debug\net5.0\DocumentManagementSystem.Dtos.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Dtos\obj\Debug\net5.0\DocumentManagementSystem.Dtos.AssemblyInfoInputs.cache
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Dtos\obj\Debug\net5.0\DocumentManagementSystem.Dtos.AssemblyInfo.cs
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Dtos\obj\Debug\net5.0\DocumentManagementSystem.Dtos.csproj.CoreCompileInputs.cache
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Dtos\obj\Debug\net5.0\DocumentManagementSystem.Dtos.csproj.CopyComplete
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Dtos\obj\Debug\net5.0\DocumentManagementSystem.Dtos.dll
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Dtos\obj\Debug\net5.0\refint\DocumentManagementSystem.Dtos.dll
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Dtos\obj\Debug\net5.0\DocumentManagementSystem.Dtos.pdb
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Dtos\obj\Debug\net5.0\ref\DocumentManagementSystem.Dtos.dll

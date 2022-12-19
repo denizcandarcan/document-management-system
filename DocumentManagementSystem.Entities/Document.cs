@@ -10,19 +10,20 @@ namespace DocumentManagementSystem.Entities
     {
         public string Title { get; set; }
         public string Description { get; set; }
-        public int TypeDocId { get; set; }
-        public TypeOfDoc TypeOfDoc { get; set; }
-        public int ClassOfDocId { get; set; }
-        public ClassOfDoc ClassOfDoc { get; set; }
+        public string TypeOfDoc { get; set; }
+        public string ClassOfDoc { get; set; }
         public DocState DocState { get; set; }
         public DocStatus DocStatus { get; set; }
         public int? ReplyDocId { get; set; }
         public DateTime SendDate { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;
         public DateTime? ReceiveDate { get; set; }
-        public int LocationId { get; set; }
-        public Location Location { get; set; }
-        public List<AppUserDocument> AppUserDocuments { get; set; }
+        public string RoomNumber { get; set; } = string.Empty;
+        public string ShelfNumber { get; set; } = string.Empty;
+        public bool isBorrowed { get; set; } = false;
+        public string BorrowerName { get; set; } = string.Empty;
+        public int AppUserId { get; set; }
+        public AppUser AppUser { get; set; }
     }
 
     public enum DocState

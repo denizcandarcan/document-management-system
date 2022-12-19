@@ -17,3 +17,5 @@ C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\Document
 C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Business\obj\Debug\net5.0\refint\DocumentManagementSystem.Business.dll
 C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Business\obj\Debug\net5.0\DocumentManagementSystem.Business.pdb
 C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Business\obj\Debug\net5.0\ref\DocumentManagementSystem.Business.dll
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Business\bin\Debug\net5.0\DocumentManagementSystem.Dtos.dll
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.Business\bin\Debug\net5.0\DocumentManagementSystem.Dtos.pdb

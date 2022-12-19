@@ -16,9 +16,8 @@ namespace DocumentManagementSystem.Entities
         public string PhoneNumber { get; set; }
         public int DeparmentId { get; set; }
         public Department Department { get; set; }
-        public List<AppUserDocument> AppUserDocuments { get; set; }
+        public List<Document> Documents { get; set; }
         public List<AppUserRole> AppUserRoles { get; set; }
-        public List<Location> Locations { get; set; }
 
     }
 }

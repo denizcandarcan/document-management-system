@@ -18,11 +18,11 @@ namespace DocumentManagementSystem.DataAccess.Configurations
             builder.Property(x=> x.Description).HasColumnType("ntext").IsRequired();
             builder.Property(x=> x.DocState).IsRequired();
             builder.Property(x=> x.SendDate).IsRequired();
+            builder.Property(x=>x.ClassOfDoc).HasMaxLength(30).IsRequired();
+            builder.Property(x=> x.TypeOfDoc).HasMaxLength(30).IsRequired();
 
+            builder.HasOne(x => x.AppUser).WithMany(x => x.Documents).HasForeignKey(x => x.AppUserId);
 
-            builder.HasOne(x => x.ClassOfDoc).WithMany(x => x.Documents).HasForeignKey(x => x.ClassOfDocId);
-            builder.HasOne(x => x.TypeOfDoc).WithMany(x => x.Documents).HasForeignKey(x => x.TypeDocId);
-            builder.HasOne(d => d.Location).WithOne(l => l.Document).HasForeignKey<Location>(l => l.DocumentId); // chatgbt
         }
     }
 }

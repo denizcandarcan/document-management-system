@@ -1,6 +1,11 @@
 ﻿using AutoMapper;
+using DocumentManagementSystem.Business.Interfaces;
+using DocumentManagementSystem.Business.Mappings.AutoMapper;
+using DocumentManagementSystem.Business.Services;
+using DocumentManagementSystem.Business.ValidationRules;
 using DocumentManagementSystem.DataAccess.Contexts;
 using DocumentManagementSystem.DataAccess.UnitOfWork;
+using DocumentManagementSystem.Dtos;
 using FluentValidation;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -23,14 +28,17 @@ namespace DocumentManagementSystem.Business.DependencyResolvers.Microsoft
             });
             var mapperConfiguration = new MapperConfiguration(opt =>
             {
-                //opt.AddProfile(new ProvidedServiceProfile()); örnekti
+                opt.AddProfile(new DocumentProfile());
             });
             var mapper = mapperConfiguration.CreateMapper();
 
             services.AddSingleton(mapper);
             services.AddScoped<IUow, Uow>();
 
-            //services.AddTransient<IValidator<dtokendisi, dtokendisivalidator>>
+            services.AddTransient<IValidator<DocumentCreateDto>,DocumentCreateDtoValidator>();
+            services.AddTransient<IValidator<DocumentUpdateDto>, DocumentUpdateDtoValidator>();
+
+            services.AddScoped<IDocumentService, DocumentService>();
         }
     }
 }

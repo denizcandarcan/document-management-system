@@ -82,31 +82,6 @@ namespace DocumentManagementSystem.DataAccess.Migrations
                     b.ToTable("AppUsers");
                 });
 
-            modelBuilder.Entity("DocumentManagementSystem.Entities.AppUserDocument", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("AppUserId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("DocumentId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RoleOfUser")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("AppUserId");
-
-                    b.HasIndex("DocumentId");
-
-                    b.ToTable("AppUserDocuments");
-                });
-
             modelBuilder.Entity("DocumentManagementSystem.Entities.AppUserRole", b =>
                 {
                     b.Property<int>("Id")
@@ -128,22 +103,6 @@ namespace DocumentManagementSystem.DataAccess.Migrations
                         .IsUnique();
 
                     b.ToTable("AppUserRoles");
-                });
-
-            modelBuilder.Entity("DocumentManagementSystem.Entities.ClassOfDoc", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Definition")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("ClassOfDocs");
                 });
 
             modelBuilder.Entity("DocumentManagementSystem.Entities.Department", b =>
@@ -170,8 +129,16 @@ namespace DocumentManagementSystem.DataAccess.Migrations
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ClassOfDocId")
+                    b.Property<int>("AppUserId")
                         .HasColumnType("int");
+
+                    b.Property<string>("BorrowerName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ClassOfDoc")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2");
@@ -186,83 +153,38 @@ namespace DocumentManagementSystem.DataAccess.Migrations
                     b.Property<int>("DocStatus")
                         .HasColumnType("int");
 
-                    b.Property<int>("LocationId")
-                        .HasColumnType("int");
-
                     b.Property<DateTime?>("ReceiveDate")
                         .HasColumnType("datetime2");
 
                     b.Property<int?>("ReplyDocId")
                         .HasColumnType("int");
 
+                    b.Property<string>("RoomNumber")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("SendDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("ShelfNumber")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Title")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("TypeDocId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("ClassOfDocId");
-
-                    b.HasIndex("TypeDocId");
-
-                    b.ToTable("Documents");
-                });
-
-            modelBuilder.Entity("DocumentManagementSystem.Entities.Location", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<int>("BorrowerId")
-                        .HasColumnType("int");
-
-                    b.Property<int>("DocumentId")
-                        .HasColumnType("int");
-
-                    b.Property<string>("RoomNumber")
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
-
-                    b.Property<string>("ShelfNumber")
-                        .HasMaxLength(20)
-                        .HasColumnType("nvarchar(20)");
+                    b.Property<string>("TypeOfDoc")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
 
                     b.Property<bool>("isBorrowed")
                         .HasColumnType("bit");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BorrowerId");
+                    b.HasIndex("AppUserId");
 
-                    b.HasIndex("DocumentId")
-                        .IsUnique();
-
-                    b.ToTable("Locations");
-                });
-
-            modelBuilder.Entity("DocumentManagementSystem.Entities.TypeOfDoc", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Definition")
-                        .IsRequired()
-                        .HasMaxLength(35)
-                        .HasColumnType("nvarchar(35)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("TypeOfDocs");
+                    b.ToTable("Documents");
                 });
 
             modelBuilder.Entity("DocumentManagementSystem.Entities.AppUser", b =>
@@ -274,25 +196,6 @@ namespace DocumentManagementSystem.DataAccess.Migrations
                         .IsRequired();
 
                     b.Navigation("Department");
-                });
-
-            modelBuilder.Entity("DocumentManagementSystem.Entities.AppUserDocument", b =>
-                {
-                    b.HasOne("DocumentManagementSystem.Entities.AppUser", "AppUser")
-                        .WithMany("AppUserDocuments")
-                        .HasForeignKey("AppUserId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DocumentManagementSystem.Entities.Document", "Document")
-                        .WithMany("AppUserDocuments")
-                        .HasForeignKey("DocumentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("AppUser");
-
-                    b.Navigation("Document");
                 });
 
             modelBuilder.Entity("DocumentManagementSystem.Entities.AppUserRole", b =>
@@ -316,40 +219,13 @@ namespace DocumentManagementSystem.DataAccess.Migrations
 
             modelBuilder.Entity("DocumentManagementSystem.Entities.Document", b =>
                 {
-                    b.HasOne("DocumentManagementSystem.Entities.ClassOfDoc", "ClassOfDoc")
+                    b.HasOne("DocumentManagementSystem.Entities.AppUser", "AppUser")
                         .WithMany("Documents")
-                        .HasForeignKey("ClassOfDocId")
+                        .HasForeignKey("AppUserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("DocumentManagementSystem.Entities.TypeOfDoc", "TypeOfDoc")
-                        .WithMany("Documents")
-                        .HasForeignKey("TypeDocId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("ClassOfDoc");
-
-                    b.Navigation("TypeOfDoc");
-                });
-
-            modelBuilder.Entity("DocumentManagementSystem.Entities.Location", b =>
-                {
-                    b.HasOne("DocumentManagementSystem.Entities.AppUser", "Borrower")
-                        .WithMany("Locations")
-                        .HasForeignKey("BorrowerId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("DocumentManagementSystem.Entities.Document", "Document")
-                        .WithOne("Location")
-                        .HasForeignKey("DocumentManagementSystem.Entities.Location", "DocumentId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Borrower");
-
-                    b.Navigation("Document");
+                    b.Navigation("AppUser");
                 });
 
             modelBuilder.Entity("DocumentManagementSystem.Entities.AppRole", b =>
@@ -359,33 +235,14 @@ namespace DocumentManagementSystem.DataAccess.Migrations
 
             modelBuilder.Entity("DocumentManagementSystem.Entities.AppUser", b =>
                 {
-                    b.Navigation("AppUserDocuments");
-
                     b.Navigation("AppUserRoles");
 
-                    b.Navigation("Locations");
-                });
-
-            modelBuilder.Entity("DocumentManagementSystem.Entities.ClassOfDoc", b =>
-                {
                     b.Navigation("Documents");
                 });
 
             modelBuilder.Entity("DocumentManagementSystem.Entities.Department", b =>
                 {
                     b.Navigation("AppUsers");
-                });
-
-            modelBuilder.Entity("DocumentManagementSystem.Entities.Document", b =>
-                {
-                    b.Navigation("AppUserDocuments");
-
-                    b.Navigation("Location");
-                });
-
-            modelBuilder.Entity("DocumentManagementSystem.Entities.TypeOfDoc", b =>
-                {
-                    b.Navigation("Documents");
                 });
 #pragma warning restore 612, 618
         }

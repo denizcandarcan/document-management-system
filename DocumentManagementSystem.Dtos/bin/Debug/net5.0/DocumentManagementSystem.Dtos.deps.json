@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "DocumentManagementSystem.Dtos/1.0.0": {
+        "dependencies": {
+          "DocumentManagementSystem.Entities": "1.0.0"
+        },
+        "runtime": {
+          "DocumentManagementSystem.Dtos.dll": {}
+        }
+      },
+      "DocumentManagementSystem.Entities/1.0.0": {
+        "runtime": {
+          "DocumentManagementSystem.Entities.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "DocumentManagementSystem.Dtos/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DocumentManagementSystem.Entities/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
