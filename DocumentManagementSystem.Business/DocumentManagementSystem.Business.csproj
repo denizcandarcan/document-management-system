@@ -5,11 +5,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.0" />
+    <PackageReference Include="FluentValidation" Version="11.4.0" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.4.0" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DocumentManagementSystem.Common\DocumentManagementSystem.Common.csproj" />
     <ProjectReference Include="..\DocumentManagementSystem.DataAccess\DocumentManagementSystem.DataAccess.csproj" />
+    <ProjectReference Include="..\DocumentManagementSystem.Dtos\DocumentManagementSystem.Dtos.csproj" />
   </ItemGroup>
 
 </Project>

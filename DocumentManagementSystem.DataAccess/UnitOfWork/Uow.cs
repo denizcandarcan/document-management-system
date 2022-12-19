@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DocumentManagementSystem.DataAccess.UnitOfWork
 {
-    public class Uow
+    public class Uow : IUow
     {
         private readonly DocumentContext _context;
 

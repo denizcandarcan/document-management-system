@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "+MDOdk40BcAJT7UNNKPiEa5TO0Yh2Sl52s6bQPETuchfcLsokMZBY+hTG6CKjdBK+w8JCEFdoGEd5cWI4jGWbA==",
+  "dgSpecHash": "k9MPSoz0q+at1Rn0eKQ2n5gi9++oMFc31EiJwx3ZbdKvlXisfOsoFZ3R4Byww4Cnvjk0HYeRMsjLxxDPTFg2mg==",
   "success": true,
   "projectFilePath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.UI\\DocumentManagementSystem.UI.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\deniz\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
+    "C:\\Users\\deniz\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
+    "C:\\Users\\deniz\\.nuget\\packages\\fluentvalidation.dependencyinjectionextensions\\11.4.0\\fluentvalidation.dependencyinjectionextensions.11.4.0.nupkg.sha512",
     "C:\\Users\\deniz\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\deniz\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\deniz\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",
