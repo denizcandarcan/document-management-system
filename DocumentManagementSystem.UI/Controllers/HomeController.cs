@@ -1,4 +1,5 @@
 ﻿using DocumentManagementSystem.Business.Interfaces;
+using DocumentManagementSystem.UI.Extensions;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
@@ -16,7 +17,7 @@ namespace DocumentManagementSystem.UI.Controllers
         public async Task<IActionResult> Index()
         {
             var response = await _documentService.GetAllAsync();
-            return View();
+            return this.ResponseView(response);
         }
     }
 }

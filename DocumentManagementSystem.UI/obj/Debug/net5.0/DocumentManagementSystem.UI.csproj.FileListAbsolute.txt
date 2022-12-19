@@ -71,3 +71,15 @@ C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\Document
 C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.UI\bin\Debug\net5.0\FluentValidation.DependencyInjectionExtensions.dll
 C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.UI\bin\Debug\net5.0\DocumentManagementSystem.Dtos.dll
 C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.UI\bin\Debug\net5.0\DocumentManagementSystem.Dtos.pdb
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.UI\bin\Debug\net5.0\DocumentManagementSystem.UI.Views.dll
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.UI\bin\Debug\net5.0\DocumentManagementSystem.UI.Views.pdb
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.UI\obj\Debug\net5.0\DocumentManagementSystem.UI.RazorAssemblyInfo.cache
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.UI\obj\Debug\net5.0\DocumentManagementSystem.UI.RazorAssemblyInfo.cs
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.UI\obj\Debug\net5.0\DocumentManagementSystem.UI.TagHelpers.input.cache
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.UI\obj\Debug\net5.0\DocumentManagementSystem.UI.TagHelpers.output.cache
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.UI\obj\Debug\net5.0\DocumentManagementSystem.UI.RazorCoreGenerate.cache
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.UI\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.UI\obj\Debug\net5.0\DocumentManagementSystem.UI.RazorTargetAssemblyInfo.cs
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.UI\obj\Debug\net5.0\DocumentManagementSystem.UI.Views.pdb
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.UI\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\DocumentManagementSystem\DocumentManagementSystem.UI\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
