@@ -13,9 +13,9 @@ namespace DocumentManagementSystem.Dtos
         public int Id { get; set; }
         public string Title { get; set; }
         public string Description { get; set; }
-        public int TypeDocId { get; set; }
+        public string SenderName { get; set; }
+        public string ReceiverName { get; set; }
         public string TypeOfDoc { get; set; }
-        public int ClassOfDocId { get; set; }
         public string ClassOfDoc { get; set; }
         public DocState DocState { get; set; }
         public DocStatus DocStatus { get; set; }

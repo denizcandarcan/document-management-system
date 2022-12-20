@@ -156,6 +156,9 @@ namespace DocumentManagementSystem.DataAccess.Migrations
                     b.Property<DateTime?>("ReceiveDate")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("ReceiverName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<int?>("ReplyDocId")
                         .HasColumnType("int");
 
@@ -164,6 +167,9 @@ namespace DocumentManagementSystem.DataAccess.Migrations
 
                     b.Property<DateTime>("SendDate")
                         .HasColumnType("datetime2");
+
+                    b.Property<string>("SenderName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("ShelfNumber")
                         .HasColumnType("nvarchar(max)");

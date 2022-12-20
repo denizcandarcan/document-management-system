@@ -12,6 +12,8 @@ namespace DocumentManagementSystem.Entities
         public string Description { get; set; }
         public string TypeOfDoc { get; set; }
         public string ClassOfDoc { get; set; }
+        public string SenderName { get; set; }
+        public string ReceiverName { get; set; }
         public DocState DocState { get; set; }
         public DocStatus DocStatus { get; set; }
         public int? ReplyDocId { get; set; }

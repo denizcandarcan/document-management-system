@@ -60,46 +60,69 @@
 
                 <ul class="menu-inner py-1">
                     <!-- Dashboard -->
-                    <li class="menu-item">
-                        <a href="index.html" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                            <div data-i18n="Analytics">Home</div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="index.html" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                            <div data-i18n="Analytics">Profile</div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="index.html" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-home-circle"></i>
-                            <div data-i18n="Analytics">Logout</div>
-                        </a>
-                    </li>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <li class="menu-item">
+                            <a asp-action="Index" asp-controller="Home" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                                <div data-i18n="Analytics">Home</div>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a href="index.html" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                                <div data-i18n="Analytics">Profile</div>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a asp-action="LogOut" asp-controller="Account" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-home-circle"></i>
+                                <div data-i18n="Analytics">Logout</div>
+                            </a>
+                        </li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="menu-header small text-uppercase"><span class="menu-header-text">Admin Operations</span></li>
+                            <!-- Cards -->
+                            <li class="menu-item">
+                                <a href="cards-basic.html" class="menu-link">
+                                    <i class="menu-icon tf-icons bx bx-collection"></i>
+                                    <div data-i18n="Basic">User Operations</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="cards-basic.html" class="menu-link">
+                                    <i class="menu-icon tf-icons bx bx-collection"></i>
+                                    <div data-i18n="Basic">Departmant Operations</div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="cards-basic.html" class="menu-link">
+                                    <i class="menu-icon tf-icons bx bx-collection"></i>
+                                    <div data-i18n="Basic">Location Operations</div>
+                                </a>
+                            </li>
+                        }
+                    }
+                    else
+                    {
+                        <li class="menu-item">
+
+                            <a asp-action="SignIn" asp-controller="Account" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-log-in-circle"></i>
+                                <div data-i18n="Analytics">Login</div>
+                            </a>
+                        </li>
+                        <li class="menu-item">
+                            <a asp-action="SignUp" asp-controller="Account" class="menu-link">
+                                <i class="menu-icon tf-icons bx bx-user-check"></i>
+                                <div data-i18n="Analytics">Sign Up</div>
+                            </a>
+                        </li>
+                    }
                     <!-- Layouts -->
                     <!-- Components -->
-                    <li class="menu-header small text-uppercase"><span class="menu-header-text">Admin Operations</span></li>
-                    <!-- Cards -->
-                    <li class="menu-item">
-                        <a href="cards-basic.html" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">User Operations</div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="cards-basic.html" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Departmant Operations</div>
-                        </a>
-                    </li>
-                    <li class="menu-item">
-                        <a href="cards-basic.html" class="menu-link">
-                            <i class="menu-icon tf-icons bx bx-collection"></i>
-                            <div data-i18n="Basic">Location Operations</div>
-                        </a>
-                        <!-- Forms & Tables -->
+                    <!-- Forms & Tables -->
                 </ul>
             </aside>
             <!-- / Menu -->

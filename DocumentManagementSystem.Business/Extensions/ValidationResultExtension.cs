@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace DocumentManagementSystem.Business.Extensions
 {
-    public static class ValidationClassExtension
+    public static class ValidationResultExtension
     {
         public static List<CustomValidationError> ConvertToCustomValidationError(this ValidationResult validationResult)
         {

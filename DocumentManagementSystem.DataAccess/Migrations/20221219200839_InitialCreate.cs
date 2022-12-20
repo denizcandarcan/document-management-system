@@ -94,6 +94,8 @@ namespace DocumentManagementSystem.DataAccess.Migrations
                     Description = table.Column<string>(type: "ntext", nullable: false),
                     TypeOfDoc = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
                     ClassOfDoc = table.Column<string>(type: "nvarchar(30)", maxLength: 30, nullable: false),
+                    SenderName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    ReceiverName = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     DocState = table.Column<int>(type: "int", nullable: false),
                     DocStatus = table.Column<int>(type: "int", nullable: false),
                     ReplyDocId = table.Column<int>(type: "int", nullable: true),
