@@ -1,10 +1,12 @@
 ﻿using DocumentManagementSystem.Business.Interfaces;
 using DocumentManagementSystem.UI.Extensions;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
 
 namespace DocumentManagementSystem.UI.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         private readonly IDocumentService _documentService;
