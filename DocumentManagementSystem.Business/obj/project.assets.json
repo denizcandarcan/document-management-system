@@ -6119,11 +6119,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Business\\DocumentManagementSystem.Business.csproj",
+      "projectUniqueName": "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.Business\\DocumentManagementSystem.Business.csproj",
       "projectName": "DocumentManagementSystem.Business",
-      "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Business\\DocumentManagementSystem.Business.csproj",
+      "projectPath": "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.Business\\DocumentManagementSystem.Business.csproj",
       "packagesPath": "C:\\Users\\deniz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Business\\obj\\",
+      "outputPath": "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.Business\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\deniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6140,14 +6140,14 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Common\\DocumentManagementSystem.Common.csproj": {
-              "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Common\\DocumentManagementSystem.Common.csproj"
+            "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.Common\\DocumentManagementSystem.Common.csproj": {
+              "projectPath": "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.Common\\DocumentManagementSystem.Common.csproj"
             },
-            "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.DataAccess\\DocumentManagementSystem.DataAccess.csproj": {
-              "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.DataAccess\\DocumentManagementSystem.DataAccess.csproj"
+            "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.DataAccess\\DocumentManagementSystem.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.DataAccess\\DocumentManagementSystem.DataAccess.csproj"
             },
-            "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Dtos\\DocumentManagementSystem.Dtos.csproj": {
-              "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.Dtos\\DocumentManagementSystem.Dtos.csproj"
+            "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.Dtos\\DocumentManagementSystem.Dtos.csproj": {
+              "projectPath": "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.Dtos\\DocumentManagementSystem.Dtos.csproj"
             }
           }
         }

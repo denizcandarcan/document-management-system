@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "k9MPSoz0q+at1Rn0eKQ2n5gi9++oMFc31EiJwx3ZbdKvlXisfOsoFZ3R4Byww4Cnvjk0HYeRMsjLxxDPTFg2mg==",
+  "dgSpecHash": "nNwRTVdOGRG9YgBumO8Ne+qnqA1sdSoJvB92E+GShq8cgCKxvaIbtzUsrif+E3Qa3c/p/5r52a2XvwffELGkog==",
   "success": true,
-  "projectFilePath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\DocumentManagementSystem\\DocumentManagementSystem.UI\\DocumentManagementSystem.UI.csproj",
+  "projectFilePath": "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.UI\\DocumentManagementSystem.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\deniz\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\deniz\\.nuget\\packages\\fluentvalidation\\11.4.0\\fluentvalidation.11.4.0.nupkg.sha512",
