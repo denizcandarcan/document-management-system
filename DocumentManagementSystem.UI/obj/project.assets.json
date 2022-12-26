@@ -6203,11 +6203,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.UI\\DocumentManagementSystem.UI.csproj",
+      "projectUniqueName": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.UI\\DocumentManagementSystem.UI.csproj",
       "projectName": "DocumentManagementSystem.UI",
-      "projectPath": "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.UI\\DocumentManagementSystem.UI.csproj",
+      "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.UI\\DocumentManagementSystem.UI.csproj",
       "packagesPath": "C:\\Users\\deniz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.UI\\obj\\",
+      "outputPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.UI\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\deniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -6224,8 +6224,8 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "projectReferences": {
-            "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.Business\\DocumentManagementSystem.Business.csproj": {
-              "projectPath": "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.Business\\DocumentManagementSystem.Business.csproj"
+            "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.Business\\DocumentManagementSystem.Business.csproj": {
+              "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.Business\\DocumentManagementSystem.Business.csproj"
             }
           }
         }

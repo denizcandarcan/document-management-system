@@ -1,4 +1,5 @@
 ﻿using DocumentManagementSystem.Business.Interfaces;
+using DocumentManagementSystem.Common;
 using DocumentManagementSystem.UI.Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -20,6 +21,19 @@ namespace DocumentManagementSystem.UI.Controllers
         {
             var response = await _documentService.GetAllAsync();
             return this.ResponseView(response);
+        }
+
+        public async Task<IActionResult> Delete(int id)
+        {
+            var result = await _documentService.RemoveAsync(id);
+            if (result.ResponseType == Common.ResponseType.Success)
+            {
+                return this.ResponseRedirectAction(result,"Index");
+            }
+            else
+            {
+                return View("Index");
+            }
         }
     }
 }
