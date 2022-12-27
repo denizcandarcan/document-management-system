@@ -1,0 +1,63 @@
+﻿@model DocumentCreateDto
+@{
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-xl">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Add New Document</h5>
+                <small class="text-muted float-end">G.A.U.</small>
+            </div>
+            <div class="card-body">
+                <form method="post" asp-action="Create" asp-controller="Home">
+                    <div class="mb-3">
+                        <label class="form-label" for="basic-default-fullname">Title of Document</label>
+                        <input type="text" class="form-control" asp-for="@Model.Title" placeholder="example: Denizcan's Transcript" />
+                        <span class="text-danger" asp-validation-for="@Model.Title"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="basic-default-fullname">Type of Document</label>
+                        <input type="text" class="form-control" asp-for="@Model.TypeOfDoc" placeholder="example: Trascript" />
+                        <span class="text-danger" asp-validation-for="@Model.TypeOfDoc"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="basic-default-fullname">Type of Document</label>
+                        <input type="text" class="form-control" asp-for="@Model.ClassOfDoc" placeholder="example: Report" />
+                        <span class="text-danger" asp-validation-for="@Model.ClassOfDoc"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlSelect1" class="form-label">Example select</label>
+                        <select class="form-select" asp-for="@Model.DocState" aria-label="Document State">
+                            <option selected>Open this select menu</option>
+                            <option value="0">Physical</option>
+                            <option value="1">Electronic</option>
+                        </select>
+                        <span class="text-danger" asp-validation-for="@Model.DocState"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="basic-default-message">Description</label>
+                        <textarea asp-for="@Model.Description"
+                                  class="form-control"
+                                  placeholder="Descripe document content"></textarea>
+                        <span class="text-danger" asp-validation-for="@Model.Description"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="basic-default-fullname">Sender Name</label>
+                        <input type="text" class="form-control" asp-for="@Model.SenderName" placeholder="example: Aylin Calci" />
+                        <span class="text-danger" asp-validation-for="@Model.SenderName"></span>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="basic-default-fullname">Receiver Name</label>
+                        <input type="text" class="form-control" asp-for="@Model.ReceiverName" placeholder="example: Denizcan Darcan" />
+                        <span class="text-danger" asp-validation-for="@Model.ReceiverName"></span>
+                    </div>
+                    <div class="text-danger" asp-validation-summary="All"></div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                   
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

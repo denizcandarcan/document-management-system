@@ -1,8 +1,16 @@
-﻿using DocumentManagementSystem.Business.Interfaces;
+﻿using AutoMapper;
+using DocumentManagementSystem.Business.Interfaces;
+using DocumentManagementSystem.Business.Services;
+using DocumentManagementSystem.Business.ValidationRules;
 using DocumentManagementSystem.Common;
+using DocumentManagementSystem.Common.Enums;
+using DocumentManagementSystem.Dtos;
 using DocumentManagementSystem.UI.Extensions;
+using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
+using System.Security.Claims;
 using System.Threading.Tasks;
 
 namespace DocumentManagementSystem.UI.Controllers
@@ -11,10 +19,12 @@ namespace DocumentManagementSystem.UI.Controllers
     public class HomeController : Controller
     {
         private readonly IDocumentService _documentService;
+        private readonly IValidator<DocumentCreateDto> _documentCreateValidator;
 
-        public HomeController(IDocumentService documentService)
+        public HomeController(IDocumentService documentService, IValidator<DocumentCreateDto> documentCreateValidator)
         {
             _documentService = documentService;
+            _documentCreateValidator = documentCreateValidator;
         }
 
         public async Task<IActionResult> Index()
@@ -23,17 +33,43 @@ namespace DocumentManagementSystem.UI.Controllers
             return this.ResponseView(response);
         }
 
+        [Authorize(Roles = "Admin,Moderator")]
         public async Task<IActionResult> Delete(int id)
         {
             var result = await _documentService.RemoveAsync(id);
             if (result.ResponseType == Common.ResponseType.Success)
             {
-                return this.ResponseRedirectAction(result,"Index");
+                return this.ResponseRedirectAction(result, "Index");
             }
             else
             {
                 return View("Index");
             }
+        }
+        [Authorize(Roles = "Admin,Moderator")]
+        public IActionResult Create()
+        {
+            var model = new DocumentCreateDto() { };
+            return View("Create");
+        }
+        [Authorize(Roles = "Admin,Moderator")]
+        [HttpPost]
+        public async Task<IActionResult> Create(DocumentCreateDto model)
+        {
+            var result = _documentCreateValidator.Validate(model);
+            if (result.IsValid)
+            {
+                var userId = User.FindFirstValue(ClaimTypes.NameIdentifier);
+                model.AppUserId = int.Parse(userId);
+                var createResponse = await _documentService.CreateAsync(model);
+                return this.ResponseRedirectAction(createResponse, "Index");
+
+            }
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+            }
+            return View(model);
         }
     }
 }

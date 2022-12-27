@@ -15,7 +15,7 @@ namespace DocumentManagementSystem.Entities
         public string SenderName { get; set; }
         public string ReceiverName { get; set; }
         public DocState DocState { get; set; }
-        public DocStatus DocStatus { get; set; }
+        public DocStatus DocStatus { get; set; } = DocStatus.Sent;
         public int? ReplyDocId { get; set; }
         public DateTime SendDate { get; set; }
         public DateTime CreatedDate { get; set; } = DateTime.Now;

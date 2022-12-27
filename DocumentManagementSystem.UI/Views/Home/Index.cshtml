@@ -59,7 +59,7 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="auth-login-basic.html">
+                        <a class="dropdown-item" asp-action="LogOut" asp-controller="Account">
                             <i class="bx bx-power-off me-2"></i>
                             <span class="align-middle">Log Out</span>
                         </a>
@@ -75,9 +75,9 @@
 <div class="container-xxl flex-grow-1 container-p-y">
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">List of  /</span> Documents</h4>
 
-    <!-- Hoverable Table rows -->
-    <button class="btn btn-primary mb-2">Add New Document</button>
-
+    @if (User.IsInRole("Admin") || User.IsInRole("Moderator")){
+    <a class="btn btn-primary mb-2" asp-action="Create">Add New Document</a>
+    }
     <div class="card">
 
         <div class="table-responsive text-nowrap">

@@ -21,5 +21,6 @@ namespace DocumentManagementSystem.Dtos
         public int? ReplyDocId { get; set; }
         public DateTime SendDate { get; set; }
         public DateTime? ReceiveDate { get; set; }
+        public int AppUserId { get; set; }
     }
 }
