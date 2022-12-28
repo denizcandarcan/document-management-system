@@ -41,9 +41,10 @@ namespace DocumentManagementSystem.UI.Controllers
             _mapper = mapper;
         }
 
-        public async Task<IActionResult> Index([FromQuery] string search)
+        public async Task<IActionResult> Index([FromQuery] string search, [FromQuery] string searchopt)
         {
-            if (String.IsNullOrEmpty(search)){
+            if (String.IsNullOrEmpty(search))
+            {
                 var docs = await _context.Documents.ToListAsync();
 
                 var response = await _documentService.GetAllAsync();
@@ -51,11 +52,31 @@ namespace DocumentManagementSystem.UI.Controllers
             }
             else
             {
-                var docs = await _context.Documents.Where(x=>x.Title.Contains(search)).ToListAsync();
+                int selectedOpt = int.Parse(searchopt);
+                var docs = await _context.Documents.Where(x => x.Title.Contains(search)).ToListAsync();
+
+                switch (selectedOpt)
+                {
+                    default:
+                        docs = await _context.Documents.Where(x => x.Title.Contains(search)).ToListAsync();
+                        break;
+                    case 1:
+                        docs = await _context.Documents.Where(x => x.SenderName.Contains(search)).ToListAsync();
+                        break;
+                    case 2:
+                        docs = await _context.Documents.Where(x => x.ReceiverName.Contains(search)).ToListAsync();
+                        break;
+                    case 3:
+                        docs = await _context.Documents.Where(x => x.TypeOfDoc.Contains(search)).ToListAsync();
+                        break;
+                    case 4:
+                        docs = await _context.Documents.Where(x => x.ClassOfDoc.Contains(search)).ToListAsync();
+                        break;
+                }
                 var dtos = new List<DocumentListDto>();
                 foreach (var doc in docs)
                 {
-                   var dto = _mapper.Map<DocumentListDto>(doc);
+                    var dto = _mapper.Map<DocumentListDto>(doc);
                     dtos.Add(dto);
                 }
                 var response = await _documentService.GetAllAsync();
@@ -115,7 +136,7 @@ namespace DocumentManagementSystem.UI.Controllers
         {
             if (dto.DocStatus == DocStatus.Delivered)
             {
-                dto.ReceiveDate= DateTime.Now;
+                dto.ReceiveDate = DateTime.Now;
             }
             var response = await _documentService.UpdateAsync(dto);
             return this.ResponseRedirectAction(response, "Index");

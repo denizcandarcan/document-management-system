@@ -4,6 +4,14 @@
 }
 <form class="form-inline my-2 my-lg-0 row" asp-action="Index" asp-controller="Home" method="get">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
+    <select class="form-select" name="searchopt">
+        <option value="0" selected>Title of Doc</option>
+        <option value="1">Sender</option>
+        <option value="2">Receiver</option>
+        <option value="3">Type of Doc</option>
+        <option value="4">Class of Doc</option>
+
+    </select>
     <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
 </form>
 
@@ -12,7 +20,7 @@
 
     @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
     {
-        <a class="btn btn-primary mb-2"  asp-action="Create">Add New Document</a>
+        <a class="btn btn-primary mb-2" asp-action="Create">Add New Document</a>
     }
     <div class="card">
 
