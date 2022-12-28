@@ -83,7 +83,7 @@ namespace DocumentManagementSystem.Business.Services
             if (result.IsValid)
             {
                 var unchangedData = await _uow.GetRepository<T>().FindAsync(dto.Id);
-                if (unchangedData != null)
+                if (unchangedData == null)
                 {
                     return new Response<UpdateDto>(ResponseType.NotFound, $"{dto.Id} id data not found.");
                 }

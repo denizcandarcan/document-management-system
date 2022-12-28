@@ -22,9 +22,6 @@ namespace DocumentManagementSystem.Dtos
         public int? ReplyDocId { get; set; }
         public DateTime SendDate { get; set; }
         public DateTime? ReceiveDate { get; set; }
-        public string RoomNumber { get; set; }
-        public string ShelfNumber { get; set; }
-        public bool isBorrowed { get; set; }
-        public string BorrowerName { get; set; }
+        public int AppUserId { get; set; }
     }
 }

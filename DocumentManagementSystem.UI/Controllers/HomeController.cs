@@ -4,12 +4,15 @@ using DocumentManagementSystem.Business.Services;
 using DocumentManagementSystem.Business.ValidationRules;
 using DocumentManagementSystem.Common;
 using DocumentManagementSystem.Common.Enums;
+using DocumentManagementSystem.DataAccess.Contexts;
 using DocumentManagementSystem.Dtos;
+using DocumentManagementSystem.Entities;
 using DocumentManagementSystem.UI.Extensions;
 using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using System;
 using System.Security.Claims;
 using System.Threading.Tasks;
 
@@ -70,6 +73,25 @@ namespace DocumentManagementSystem.UI.Controllers
                 ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
             }
             return View(model);
+        }
+
+        [Authorize(Roles = "Admin,Moderator")]
+        public async Task<IActionResult> Edit(int id)
+        {
+            var response = await _documentService.GetByIdAsync<DocumentUpdateDto>(id);
+            return this.ResponseView(response);
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "Admin,Moderator")]
+        public async Task<IActionResult> Edit(DocumentUpdateDto dto)
+        {
+            if (dto.DocStatus == DocStatus.Delivered)
+            {
+                dto.ReceiveDate= DateTime.Now;
+            }
+            var response = await _documentService.UpdateAsync(dto);
+            return this.ResponseRedirectAction(response, "Index");
         }
     }
 }
