@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.Entities\\DocumentManagementSystem.Entities.csproj",
+      "projectUniqueName": "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.Entities\\DocumentManagementSystem.Entities.csproj",
       "projectName": "DocumentManagementSystem.Entities",
-      "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.Entities\\DocumentManagementSystem.Entities.csproj",
+      "projectPath": "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.Entities\\DocumentManagementSystem.Entities.csproj",
       "packagesPath": "C:\\Users\\deniz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.Entities\\obj\\",
+      "outputPath": "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.Entities\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\deniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
