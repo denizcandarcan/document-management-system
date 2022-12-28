@@ -5,6 +5,8 @@ using DocumentManagementSystem.Business.ValidationRules;
 using DocumentManagementSystem.Common;
 using DocumentManagementSystem.Common.Enums;
 using DocumentManagementSystem.DataAccess.Contexts;
+using DocumentManagementSystem.DataAccess.Interfaces;
+using DocumentManagementSystem.DataAccess.UnitOfWork;
 using DocumentManagementSystem.Dtos;
 using DocumentManagementSystem.Entities;
 using DocumentManagementSystem.UI.Extensions;
@@ -12,9 +14,14 @@ using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace DocumentManagementSystem.UI.Controllers
 {
@@ -23,17 +30,37 @@ namespace DocumentManagementSystem.UI.Controllers
     {
         private readonly IDocumentService _documentService;
         private readonly IValidator<DocumentCreateDto> _documentCreateValidator;
+        private readonly DocumentContext _context;
+        private readonly IMapper _mapper;
 
-        public HomeController(IDocumentService documentService, IValidator<DocumentCreateDto> documentCreateValidator)
+        public HomeController(IDocumentService documentService, IValidator<DocumentCreateDto> documentCreateValidator, DocumentContext context, IMapper mapper)
         {
             _documentService = documentService;
             _documentCreateValidator = documentCreateValidator;
+            _context = context;
+            _mapper = mapper;
         }
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index([FromQuery] string search)
         {
-            var response = await _documentService.GetAllAsync();
-            return this.ResponseView(response);
+            if (String.IsNullOrEmpty(search)){
+                var docs = await _context.Documents.ToListAsync();
+
+                var response = await _documentService.GetAllAsync();
+                return this.ResponseView(response);
+            }
+            else
+            {
+                var docs = await _context.Documents.Where(x=>x.Title.Contains(search)).ToListAsync();
+                var dtos = new List<DocumentListDto>();
+                foreach (var doc in docs)
+                {
+                   var dto = _mapper.Map<DocumentListDto>(doc);
+                    dtos.Add(dto);
+                }
+                var response = await _documentService.GetAllAsync();
+                return View(dtos);
+            }
         }
 
         [Authorize(Roles = "Admin,Moderator")]
@@ -93,5 +120,6 @@ namespace DocumentManagementSystem.UI.Controllers
             var response = await _documentService.UpdateAsync(dto);
             return this.ResponseRedirectAction(response, "Index");
         }
+
     }
 }

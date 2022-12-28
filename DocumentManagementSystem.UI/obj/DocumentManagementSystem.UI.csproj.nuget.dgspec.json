@@ -360,6 +360,9 @@
             "projectReferences": {
               "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.Business\\DocumentManagementSystem.Business.csproj": {
                 "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.Business\\DocumentManagementSystem.Business.csproj"
+              },
+              "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.DataAccess\\DocumentManagementSystem.DataAccess.csproj": {
+                "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.DataAccess\\DocumentManagementSystem.DataAccess.csproj"
               }
             }
           }

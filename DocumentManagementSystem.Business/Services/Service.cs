@@ -9,6 +9,7 @@ using FluentValidation;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -50,6 +51,12 @@ namespace DocumentManagementSystem.Business.Services
         public async Task<IResponse<List<ListDto>>> GetAllAsync()
         {
             var data = await _uow.GetRepository<T>().GetAllAsync();
+            var dto = _mapper.Map<List<ListDto>>(data);
+            return new Response<List<ListDto>>(ResponseType.Success, dto);
+        }
+        public async Task<IResponse<List<ListDto>>> GetAllAsync(Expression<Func<T, bool>> filter)
+        {
+            var data = await _uow.GetRepository<T>().GetAllAsync(filter);
             var dto = _mapper.Map<List<ListDto>>(data);
             return new Response<List<ListDto>>(ResponseType.Success, dto);
         }

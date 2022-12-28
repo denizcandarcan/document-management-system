@@ -6194,6 +6194,7 @@
   "projectFileDependencyGroups": {
     "net5.0": [
       "DocumentManagementSystem.Business >= 1.0.0",
+      "DocumentManagementSystem.DataAccess >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 5.0.17"
     ]
   },
@@ -6226,6 +6227,9 @@
           "projectReferences": {
             "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.Business\\DocumentManagementSystem.Business.csproj": {
               "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.Business\\DocumentManagementSystem.Business.csproj"
+            },
+            "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.DataAccess\\DocumentManagementSystem.DataAccess.csproj": {
+              "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.DataAccess\\DocumentManagementSystem.DataAccess.csproj"
             }
           }
         }

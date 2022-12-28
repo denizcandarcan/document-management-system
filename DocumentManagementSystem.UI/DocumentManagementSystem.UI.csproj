@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DocumentManagementSystem.Business\DocumentManagementSystem.Business.csproj" />
+    <ProjectReference Include="..\DocumentManagementSystem.DataAccess\DocumentManagementSystem.DataAccess.csproj" />
   </ItemGroup>
 
 </Project>
