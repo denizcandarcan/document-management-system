@@ -147,7 +147,7 @@ namespace DocumentManagementSystem.UI.Controllers
             }
         }
 
-        [Authorize(Roles = "Admin,Moderator")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> Delete(int id)
         {
             var result = await _documentService.RemoveAsync(id);

@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 
 namespace DocumentManagementSystem.UI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class UserController : Controller
     {
         private readonly IAppUserService _appUserService;

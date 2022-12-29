@@ -3,13 +3,16 @@ using DocumentManagementSystem.Business.Services;
 using DocumentManagementSystem.Dtos;
 using DocumentManagementSystem.UI.Extensions;
 using DocumentManagementSystem.UI.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
+using System.Data;
 using System.Threading.Tasks;
 
 namespace DocumentManagementSystem.UI.Controllers
 {
+    [Authorize(Roles = "Admin")]
     public class DepartmentController : Controller
     {
         private readonly IDeparmentService _departmentService;
