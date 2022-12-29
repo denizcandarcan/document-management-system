@@ -19,14 +19,19 @@
 <div class="container-xxl flex-grow-1 container-p-y">
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">List of  /</span> Documents</h4>
 
+    <div class="container-fluid align-items-end row mb-2">
+    <form method="get">
 
-    <div class="container-fluid align-items-end">
-        <label class="float-right" for="basic-default-fullname">Sort By</label>
-        <select class="float-righ" aria-label="Document State">
+        <label class="m-2" for="basic-default-fullname">Sort By</label>
+        <select class="m-2" name="sortOption">
             <option selected>Open this select menu</option>
-            <option value="0">Physical</option>
-            <option value="1">Electronic</option>
+            <option value="title">Title</option>
+            <option value="type">Document Type</option>
+            <option value="status">Status</option>
+            <option value="state">State</option>
         </select>
+        <button type="submit" class="btn btn-success">Sort</button>
+        </form>
     </div>
     <div class="card">
 
@@ -82,12 +87,12 @@
                                 </td>
                             }
                         </tr>
-
                     }
 
                 </tbody>
+
             </table>
-    
+
         </div>
 
     </div>

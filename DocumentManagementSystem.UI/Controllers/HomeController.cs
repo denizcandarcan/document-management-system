@@ -8,6 +8,7 @@ using DocumentManagementSystem.DataAccess.Contexts;
 using DocumentManagementSystem.DataAccess.Interfaces;
 using DocumentManagementSystem.DataAccess.UnitOfWork;
 using DocumentManagementSystem.Dtos;
+using DocumentManagementSystem.Dtos.Interfaces;
 using DocumentManagementSystem.Entities;
 using DocumentManagementSystem.UI.Extensions;
 using FluentValidation;
@@ -41,14 +42,60 @@ namespace DocumentManagementSystem.UI.Controllers
             _mapper = mapper;
         }
 
-        public async Task<IActionResult> Index([FromQuery] string search, [FromQuery] string searchopt)
+        public async Task<IActionResult> Index([FromQuery] string search, [FromQuery] string searchopt, [FromQuery] string sortOption)
         {
             if (String.IsNullOrEmpty(search))
             {
-                var docs = await _context.Documents.ToListAsync();
-
-                var response = await _documentService.GetAllAsync();
-                return this.ResponseView(response);
+                if (sortOption == "title")
+                {
+                    var docs = _context.Documents.OrderBy(x => x.Title);
+                    var dtos = new List<DocumentListDto>();
+                    foreach (var doc in docs)
+                    {
+                        var dto = _mapper.Map<DocumentListDto>(doc);
+                        dtos.Add(dto);
+                    }
+                    return View("Index", dtos);
+                }
+                else if (sortOption == "type")
+                {
+                    var docs = _context.Documents.OrderBy(x => x.TypeOfDoc);
+                    var dtos = new List<DocumentListDto>();
+                    foreach (var doc in docs)
+                    {
+                        var dto = _mapper.Map<DocumentListDto>(doc);
+                        dtos.Add(dto);
+                    }
+                    return View("Index", dtos);
+                }
+                else if (sortOption == "status")
+                {
+                    var docs = _context.Documents.OrderBy(x => x.DocStatus);
+                    var dtos = new List<DocumentListDto>();
+                    foreach (var doc in docs)
+                    {
+                        var dto = _mapper.Map<DocumentListDto>(doc);
+                        dtos.Add(dto);
+                    }
+                    return View("Index", dtos);
+                }
+                else if (sortOption == "state")
+                {
+                    var docs = _context.Documents.OrderBy(x => x.DocState);
+                    var dtos = new List<DocumentListDto>();
+                    foreach (var doc in docs)
+                    {
+                        var dto = _mapper.Map<DocumentListDto>(doc);
+                        dtos.Add(dto);
+                    }
+                    return View("Index", dtos);
+                }
+                else
+                {
+                    var docs = await _context.Documents.ToListAsync();
+                    var response = await _documentService.GetAllAsync();
+                    return this.ResponseView(response);
+                }
             }
             else
             {
