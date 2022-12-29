@@ -1,0 +1,25 @@
+﻿@model DepartmentCreateDto
+@{
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-xl">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0"> Create <strong></strong> Department</h5>
+            </div>
+            <div class="card-body">
+                <form method="post" asp-action="Create" asp-controller="Department">
+                    <div class="mb-3">
+                        <label class="form-label" for="basic-default-fullname">Department Name</label>
+                        <input type="text" class="form-control" asp-for="@Model.Definition" placeholder="Name of department.." />
+                        <span class="text-danger" asp-validation-for="@Model.Definition"></span>
+                    </div>
+                    <div class="text-danger" asp-validation-summary="All"></div>
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

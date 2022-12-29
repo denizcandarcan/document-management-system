@@ -264,3 +264,8 @@ C:\Users\deniz\Documents\Projects\document-management-system\DocumentManagementS
 C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\document-management-system\DocumentManagementSystem.UI\obj\Debug\net5.0\Razor\Views\Home\Edit.cshtml.g.cs
 C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\document-management-system\DocumentManagementSystem.UI\obj\Debug\net5.0\Razor\Views\Home\Detail.cshtml.g.cs
 C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\document-management-system\DocumentManagementSystem.UI\obj\Debug\net5.0\Razor\Views\Account\Detail.cshtml.g.cs
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\document-management-system\DocumentManagementSystem.UI\obj\Debug\net5.0\Razor\Views\User\Index.cshtml.g.cs
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\document-management-system\DocumentManagementSystem.UI\obj\Debug\net5.0\Razor\Views\User\Update.cshtml.g.cs
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\document-management-system\DocumentManagementSystem.UI\obj\Debug\net5.0\Razor\Views\Department\Index.cshtml.g.cs
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\document-management-system\DocumentManagementSystem.UI\obj\Debug\net5.0\Razor\Views\Department\Update.cshtml.g.cs
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\document-management-system\DocumentManagementSystem.UI\obj\Debug\net5.0\Razor\Views\Department\Create.cshtml.g.cs
