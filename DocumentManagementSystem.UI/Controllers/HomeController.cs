@@ -142,5 +142,10 @@ namespace DocumentManagementSystem.UI.Controllers
             return this.ResponseRedirectAction(response, "Index");
         }
 
+        public async Task<IActionResult> Detail(int id)
+        {
+            var response = await _documentService.GetByIdAsync<DocumentUpdateDto>(id);
+            return this.ResponseView(response);
+        }
     }
 }

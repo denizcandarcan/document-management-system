@@ -2,9 +2,10 @@
 @{
     Layout = "_Layout";
 }
-<form class="form-inline my-2 my-lg-0 row" asp-action="Index" asp-controller="Home" method="get">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="search">
-    <select class="form-select" name="searchopt">
+
+<form class="form-inline my-2 my-lg-0 m-4 row" asp-action="Index" asp-controller="Home" method="get">
+    <input class="form-control mr-sm-2 mt-3" type="search" placeholder="Search" aria-label="Search" name="search">
+    <select class="form-select mt-2" name="searchopt">
         <option value="0" selected>Title of Doc</option>
         <option value="1">Sender</option>
         <option value="2">Receiver</option>
@@ -12,16 +13,21 @@
         <option value="4">Class of Doc</option>
 
     </select>
-    <button class="btn btn-outline-primary my-2 my-sm-0" type="submit">Search</button>
+    <button class="btn btn-outline-primary mt-3" type="submit">Search</button>
 </form>
 
 <div class="container-xxl flex-grow-1 container-p-y">
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">List of  /</span> Documents</h4>
 
-    @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
-    {
-        <a class="btn btn-primary mb-2" asp-action="Create">Add New Document</a>
-    }
+
+    <div class="container-fluid align-items-end">
+        <label class="float-right" for="basic-default-fullname">Sort By</label>
+        <select class="float-righ" aria-label="Document State">
+            <option selected>Open this select menu</option>
+            <option value="0">Physical</option>
+            <option value="1">Electronic</option>
+        </select>
+    </div>
     <div class="card">
 
         <div class="table-responsive text-nowrap">
@@ -70,7 +76,7 @@
                                             <i class="bx bx-dots-vertical-rounded"></i>
                                         </button>
                                         <div class="dropdown-menu">
-                                            <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-edit-alt me-1"></i> Details</a>
+                                            <a class="dropdown-item" asp-controller="Home" asp-action="Detail" asp-route-id="@item.Id"><i class="bx bx-edit-alt me-1"></i> Details</a>
                                         </div>
                                     </div>
                                 </td>
@@ -81,8 +87,14 @@
 
                 </tbody>
             </table>
+    
         </div>
+
     </div>
+    @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
+    {
+        <a class="btn btn-primary mt-3" asp-action="Create">Add New Document</a>
+    }
     <!--/ Hoverable Table rows -->
 </div>
 <hr class="my-5" />

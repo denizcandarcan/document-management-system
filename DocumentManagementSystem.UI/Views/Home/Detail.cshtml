@@ -1,0 +1,84 @@
+﻿@model DocumentUpdateDto
+@{
+    Layout = "_Layout";
+}
+
+<div class="row">
+    <div class="col-xl">
+        <div class="card mb-4">
+            <div class="card-header d-flex justify-content-between align-items-center">
+                <h5 class="mb-0">Details of @Model.Title Document</h5>
+                <small class="text-muted float-end">G.A.U.</small>
+            </div>
+            <div class="card-body">
+                <div class="mb-3">
+                    <label class="form-label" for="basic-default-fullname">ID</label>
+                    <input type="text" class="form-control" asp-for="@Model.Id" disabled />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="basic-default-fullname">Created Date</label>
+                    <input type="text" class="form-control" asp-for="@Model.CreatedDate" disabled />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="basic-default-fullname">Reply Doc ID?</label>
+                    <input type="text" class="form-control" asp-for="@Model.ReplyDocId" disabled />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="basic-default-fullname">Title of Document</label>
+                    <input type="text" class="form-control" asp-for="@Model.Title" disabled />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="basic-default-fullname">Type of Document</label>
+                    <input type="text" class="form-control" asp-for="@Model.TypeOfDoc" disabled />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="basic-default-fullname">Class of Document</label>
+                    <input type="text" class="form-control" asp-for="@Model.ClassOfDoc" disabled />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="basic-default-message">Description</label>
+                    <textarea asp-for="@Model.Description"
+                              class="form-control"
+                              disabled></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="basic-default-fullname">Send Date</label>
+                    <input type="text" class="form-control" asp-for="@Model.SendDate" disabled />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="basic-default-fullname">Sender Name</label>
+                    <input type="text" class="form-control" asp-for="@Model.SenderName" disabled />
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="basic-default-fullname">Receiver Name</label>
+                    <input type="text" class="form-control" asp-for="@Model.ReceiverName" disabled />
+                </div>
+
+                <div class="mb-3">
+                    <label for="exampleFormControlSelect1" class="form-label">Document State</label>
+                    <select class="form-select" asp-for="@Model.DocState" aria-label="Document State" disabled>
+                        <option selected>Open this select menu</option>
+                        <option value="0">Physical</option>
+                        <option value="1">Electronic</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="basic-default-fullname">Send Date</label>
+                    <input type="text" class="form-control" asp-for="@Model.SendDate" disabled />
+                </div>
+                <div class="mb-3">
+                    <label for="exampleFormControlSelect1" class="form-label">Document Status</label>
+                    <select class="form-select" aria-label="Document Status" asp-for="@Model.DocStatus" disabled>
+                        <option selected>Open this select menu</option>
+                        <option value="0">Sent</option>
+                        <option value="1">Delivered</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="basic-default-fullname">Receive Date</label>
+                    <input type="text" class="form-control" asp-for="@Model.ReceiveDate" disabled />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
