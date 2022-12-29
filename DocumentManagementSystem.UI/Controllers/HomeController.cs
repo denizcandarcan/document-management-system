@@ -122,6 +122,10 @@ namespace DocumentManagementSystem.UI.Controllers
                         {
                             docs = docs.OrderBy(x => x.DocState).ToList();
                         }
+                        else if (sortOption == "senddate")
+                        {
+                            docs = docs.OrderBy(x => x.SendDate).ToList();
+                        }
                         break;
                     case 1:
                         docs = await _context.Documents.Where(x => x.SenderName.Contains(search)).ToListAsync();

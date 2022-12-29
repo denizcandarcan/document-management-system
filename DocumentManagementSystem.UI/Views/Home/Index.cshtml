@@ -18,6 +18,8 @@
         <option value="type">Document Type</option>
         <option value="status">Status</option>
         <option value="state">State</option>
+        <option value="senddate">Send Date</option>
+
     </select>
     <button class="btn btn-outline-primary mt-3" type="submit">Search</button>
 </form>
@@ -30,9 +32,11 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>Document Name</th>
+                        <th>Title</th>
                         <th>Type</th>
                         <th>Class</th>
+                        <th>State</th>
+                        <th>Send Date</th>
                         <th>Status</th>
                         <th>Actions</th>
                     </tr>
@@ -46,7 +50,13 @@
                                 @item.TypeOfDoc
                             </td>
                             <td>
+                                @item.ClassOfDoc
+                            </td>
+                            <td>
                                 @item.DocState
+                            </td>
+                            <td>
+                                @item.SendDate.ToString("dd/MM/yyyy")
                             </td>
                             <td><span class="badge bg-label-primary me-1">@item.DocStatus</span></td>
                             @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
