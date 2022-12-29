@@ -49,6 +49,7 @@ namespace DocumentManagementSystem.UI
 
             var profiles = ProfileHelper.GetProfiles();
             profiles.Add(new UserCreateModelProfile());
+            profiles.Add(new UserUpdateModelProfile());
 
             var configuration = new MapperConfiguration(opt =>
             {

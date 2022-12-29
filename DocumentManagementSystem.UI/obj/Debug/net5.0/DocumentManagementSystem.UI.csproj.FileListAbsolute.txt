@@ -263,3 +263,4 @@ C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\document-management-system\Docume
 C:\Users\deniz\Documents\Projects\document-management-system\DocumentManagementSystem.UI\obj\Debug\net5.0\Razor\Views\Home\Create.cshtml.g.cs
 C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\document-management-system\DocumentManagementSystem.UI\obj\Debug\net5.0\Razor\Views\Home\Edit.cshtml.g.cs
 C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\document-management-system\DocumentManagementSystem.UI\obj\Debug\net5.0\Razor\Views\Home\Detail.cshtml.g.cs
+C:\Users\deniz\OneDrive\Belgeler\Projects\.NET\document-management-system\DocumentManagementSystem.UI\obj\Debug\net5.0\Razor\Views\Account\Detail.cshtml.g.cs

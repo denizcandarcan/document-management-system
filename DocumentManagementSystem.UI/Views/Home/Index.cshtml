@@ -11,28 +11,19 @@
         <option value="2">Receiver</option>
         <option value="3">Type of Doc</option>
         <option value="4">Class of Doc</option>
-
+    </select>
+    <select class="form-select mt-2" name="sortOption" placeholder="Sorting by...">
+        <option selected>Sort By</option>
+        <option value="title">Title</option>
+        <option value="type">Document Type</option>
+        <option value="status">Status</option>
+        <option value="state">State</option>
     </select>
     <button class="btn btn-outline-primary mt-3" type="submit">Search</button>
 </form>
 
 <div class="container-xxl flex-grow-1 container-p-y">
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">List of  /</span> Documents</h4>
-
-    <div class="container-fluid align-items-end row mb-2">
-    <form method="get">
-
-        <label class="m-2" for="basic-default-fullname">Sort By</label>
-        <select class="m-2" name="sortOption">
-            <option selected>Open this select menu</option>
-            <option value="title">Title</option>
-            <option value="type">Document Type</option>
-            <option value="status">Status</option>
-            <option value="state">State</option>
-        </select>
-        <button type="submit" class="btn btn-success">Sort</button>
-        </form>
-    </div>
     <div class="card">
 
         <div class="table-responsive text-nowrap">
@@ -67,7 +58,10 @@
                                         </button>
                                         <div class="dropdown-menu">
                                             <a class="dropdown-item" asp-controller="Home" asp-action="Edit" asp-route-id="@item.Id"><i class="bx bx-edit-alt me-1"></i> Edit</a>
-                                            <a class="dropdown-item" asp-controller="Home" asp-action="Delete" asp-route-id="@item.Id"><i class="bx bx-trash me-1"></i> Delete</a>
+                                            @if (User.IsInRole("Admin"))
+                                            {
+                                                <a class="dropdown-item" asp-controller="Home" asp-action="Delete" asp-route-id="@item.Id"><i class="bx bx-trash me-1"></i> Delete</a>
+                                            }
                                         </div>
 
                                     </div>

@@ -12,6 +12,10 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using System.Collections.Generic;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using DocumentManagementSystem.DataAccess.Contexts;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using DocumentManagementSystem.Business.Services;
 
 namespace DocumentManagementSystem.UI.Controllers
 {
@@ -21,13 +25,15 @@ namespace DocumentManagementSystem.UI.Controllers
         private readonly IValidator<UserCreateModel> _userCreateValidator;
         private readonly IAppUserService _appUserService;
         private readonly IMapper _mapper;
+        private readonly DocumentContext _context;
 
-        public AccountController(IDeparmentService deparmentService, IValidator<UserCreateModel> userCreateValidator, IAppUserService appUserService, IMapper mapper)
+        public AccountController(IDeparmentService deparmentService, IValidator<UserCreateModel> userCreateValidator, IAppUserService appUserService, IMapper mapper, DocumentContext context)
         {
             _deparmentService = deparmentService;
             _userCreateValidator = userCreateValidator;
             _appUserService = appUserService;
             _mapper = mapper;
+            _context = context;
         }
 
         public async Task<IActionResult> SignUp()
@@ -72,14 +78,14 @@ namespace DocumentManagementSystem.UI.Controllers
             {
                 var roleResult = await _appUserService.GetRolesByUserIdAsync(result.Data.Id);
                 var claims = new List<Claim>();
-                if(roleResult.ResponseType == Common.ResponseType.Success)
+                if (roleResult.ResponseType == Common.ResponseType.Success)
                 {
                     foreach (var role in roleResult.Data)
                     {
-                        claims.Add(new Claim(ClaimTypes.Role,role.Definition));
+                        claims.Add(new Claim(ClaimTypes.Role, role.Definition));
                     }
                 }
-                claims.Add(new Claim(ClaimTypes.NameIdentifier,result.Data.Id.ToString()));
+                claims.Add(new Claim(ClaimTypes.NameIdentifier, result.Data.Id.ToString()));
 
                 var claimsIdentity = new ClaimsIdentity(
                     claims, CookieAuthenticationDefaults.AuthenticationScheme);
@@ -106,6 +112,29 @@ namespace DocumentManagementSystem.UI.Controllers
         {
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("SignIn", "Account");
+        }
+
+        public async Task<IActionResult> Detail()
+        {
+            int userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier));
+            var user = _context.AppUsers.FirstOrDefault(x=>x.Id== userId);
+            if (user != null)
+            {
+                var userDto = _mapper.Map<AppUserUpdateDto>(user);
+                var model = _mapper.Map<UserUpdateModel>(userDto);
+                var response = await _deparmentService.GetAllAsync();
+                model.Departments = new SelectList(response.Data, "Id", "Definition");
+                return View(model);
+            }
+            return View();
+        }
+        [HttpPost]
+        public async  Task<IActionResult> Detail(UserUpdateModel model)
+        {
+            var dto = _mapper.Map<AppUserUpdateDto>(model);
+            await _appUserService.UpdateAsync(dto);
+            return RedirectToAction("Index", "Home");
+
         }
     }
 }

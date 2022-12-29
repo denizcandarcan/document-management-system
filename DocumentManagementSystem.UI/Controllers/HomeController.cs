@@ -106,6 +106,22 @@ namespace DocumentManagementSystem.UI.Controllers
                 {
                     default:
                         docs = await _context.Documents.Where(x => x.Title.Contains(search)).ToListAsync();
+                        if (sortOption == "title")
+                        {
+                            docs = docs.OrderBy(x=>x.Title).ToList();
+                        }
+                        else if (sortOption == "type")
+                        {
+                            docs = docs.OrderBy(x => x.TypeOfDoc).ToList();
+                        }
+                        else if (sortOption == "status")
+                        {
+                            docs = docs.OrderBy(x => x.DocStatus).ToList();
+                        }
+                        else if (sortOption == "state")
+                        {
+                            docs = docs.OrderBy(x => x.DocState).ToList();
+                        }
                         break;
                     case 1:
                         docs = await _context.Documents.Where(x => x.SenderName.Contains(search)).ToListAsync();
@@ -127,7 +143,7 @@ namespace DocumentManagementSystem.UI.Controllers
                     dtos.Add(dto);
                 }
                 var response = await _documentService.GetAllAsync();
-                return View(dtos);
+                return View("Index",dtos);
             }
         }
 
