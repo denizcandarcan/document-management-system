@@ -124,7 +124,7 @@ namespace DocumentManagementSystem.UI.Controllers
                         }
                         else if (sortOption == "senddate")
                         {
-                            docs = docs.OrderBy(x => x.SendDate).ToList();
+                            docs = docs.OrderByDescending(x => x.SendDate).ToList();
                         }
                         break;
                     case 1:

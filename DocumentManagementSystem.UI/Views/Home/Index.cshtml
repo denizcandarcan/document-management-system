@@ -18,14 +18,18 @@
         <option value="type">Document Type</option>
         <option value="status">Status</option>
         <option value="state">State</option>
-        <option value="senddate">Send Date</option>
 
     </select>
     <button class="btn btn-outline-primary mt-3" type="submit">Search</button>
 </form>
 
 <div class="container-xxl flex-grow-1 container-p-y">
+
     <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">List of  /</span> Documents</h4>
+    @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
+    {
+        <a class="btn btn-primary mb-4 m-lg-3" asp-action="Create">Add New Document</a>
+    }
     <div class="card">
 
         <div class="table-responsive text-nowrap">
@@ -37,6 +41,8 @@
                         <th>Class</th>
                         <th>State</th>
                         <th>Send Date</th>
+                        <th>Sender</th>
+                        <th>Receiver</th>
                         <th>Status</th>
                         <th>Actions</th>
                     </tr>
@@ -57,6 +63,12 @@
                             </td>
                             <td>
                                 @item.SendDate.ToString("dd/MM/yyyy")
+                            </td>
+                            <td>
+                                @item.SenderName
+                            </td>
+                            <td>
+                                @item.ReceiverName
                             </td>
                             <td><span class="badge bg-label-primary me-1">@item.DocStatus</span></td>
                             @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
@@ -100,10 +112,6 @@
         </div>
 
     </div>
-    @if (User.IsInRole("Admin") || User.IsInRole("Moderator"))
-    {
-        <a class="btn btn-primary mt-3" asp-action="Create">Add New Document</a>
-    }
-    <!--/ Hoverable Table rows -->
+
 </div>
 <hr class="my-5" />
