@@ -2,6 +2,10 @@
 
 A .NET Core 5.0 MVC application for tracking the status of documents as they are sent and delivered between users. Developed for Girne American University as a fall-semester project.
 
+## Video
+
+Watch a demo of the project on [YouTube](https://youtu.be/9eLeALeBH1w "https://youtu.be/9eLeALeBH1w")
+
 ## Prerequisites
 
 - .NET Core 5.0 SDK
