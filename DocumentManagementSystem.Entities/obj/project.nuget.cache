@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jmz0qotF+/DGG5ej9edN8wLH2/UVcTVlCQeFjSvsxnUyerq/uclP67L9BvV2la7UldhgpeFTa2hwbib9m5spEg==",
+  "dgSpecHash": "kGqjzvVtuKyX2ZegGcV/ehphGQ1yfB8PtfN8bdv+qse1YC3YhaGIhnnGqDOcOizAA0zlSkiNdMuDsDLURzTSvQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.Entities\\DocumentManagementSystem.Entities.csproj",
+  "projectFilePath": "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.Entities\\DocumentManagementSystem.Entities.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

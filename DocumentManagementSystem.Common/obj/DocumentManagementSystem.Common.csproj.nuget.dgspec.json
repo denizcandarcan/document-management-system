@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.Common\\DocumentManagementSystem.Common.csproj": {}
+    "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.Common\\DocumentManagementSystem.Common.csproj": {}
   },
   "projects": {
-    "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.Common\\DocumentManagementSystem.Common.csproj": {
+    "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.Common\\DocumentManagementSystem.Common.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.Common\\DocumentManagementSystem.Common.csproj",
+        "projectUniqueName": "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.Common\\DocumentManagementSystem.Common.csproj",
         "projectName": "DocumentManagementSystem.Common",
-        "projectPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.Common\\DocumentManagementSystem.Common.csproj",
+        "projectPath": "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.Common\\DocumentManagementSystem.Common.csproj",
         "packagesPath": "C:\\Users\\deniz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\deniz\\OneDrive\\Belgeler\\Projects\\.NET\\document-management-system\\DocumentManagementSystem.Common\\obj\\",
+        "outputPath": "C:\\Users\\deniz\\Documents\\Projects\\document-management-system\\DocumentManagementSystem.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\deniz\\AppData\\Roaming\\NuGet\\NuGet.Config",
